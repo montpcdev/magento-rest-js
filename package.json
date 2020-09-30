@@ -1,0 +1,31 @@
+{
+  "name": "@kriscarilloxyz/magento-rest-js",
+  "version": "0.0.1",
+  "description": "Magento REST API node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests -t 50000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montpcdev/magento-rest-js.git"
+  },
+  "keywords": [
+    "magento",
+    "rest",
+    "client"
+  ],
+  "author": "kriscarilloxyz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/montpcdev/magento-rest-js/issues"
+  },
+  "homepage": "https://github.com/montpcdev/magento-rest-js#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "jsdoc": "^3.6.6",
+    "minimal-request-promise": "^1.5.0",
+    "mocha": "^8.1.3"
+  }
+}
