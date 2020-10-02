@@ -34,7 +34,7 @@ class MagentoClient {
       .then(res => JSON.parse(res.body))
   }
 
-  productUpdate (sku, product) {
+  productsUpdate (sku, product) {
     const options = {
       headers: { Authorization: `Bearer ${this.token}` },
       body: { product }
