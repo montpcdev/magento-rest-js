@@ -37,7 +37,7 @@ class MagentoClient {
   productsUpdate (sku, product) {
     const options = {
       headers: { Authorization: `Bearer ${this.token}` },
-      body: { product }
+      body: JSON.stringify({ product })
     }
     return requestPromise.put(`https://${this.url}/rest/default/V1/products/${sku}`, options)
       .then(res => JSON.parse(res.body))
