@@ -1,6 +1,6 @@
 {
   "name": "@kriscarilloxyz/magento-rest-js",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Magento REST API node",
   "main": "index.js",
   "scripts": {
