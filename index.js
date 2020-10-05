@@ -39,7 +39,6 @@ class MagentoClient {
       headers: {
         Authorization: `Bearer ${this.token}`,
         'Content-Type': 'application/json'
-
       },
       body: JSON.stringify({ product })
     }
@@ -59,6 +58,18 @@ class MagentoClient {
       headers: { Authorization: `Bearer ${this.token}` },
     }
     return requestPromise.delete(`https://${this.url}/rest/default/V1/products/${sku}`)
+      .then(res => JSON.parse(res.body))
+  }
+
+
+  /**
+   *
+   *
+   * @param {*} sku
+   * @memberof MagentoClient
+   */
+  productsMedia (sku) {
+    return requestPromise.post(`https://${this.url}/rest/default/V1/products/${sku}/media`)
       .then(res => JSON.parse(res.body))
   }
 }
