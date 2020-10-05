@@ -62,13 +62,20 @@ class MagentoClient {
   }
 
 
+
   /**
    *
    *
    * @param {*} sku
+   * @param {*} media
+   * @return {*} 
    * @memberof MagentoClient
    */
-  productsMedia (sku) {
+  productsMedia (sku, entry) {
+    const options = {
+      headers: { Authorization: `Bearer ${this.token}` },
+      body: JSON.stringify({ entry })
+    }
     return requestPromise.post(`https://${this.url}/rest/default/V1/products/${sku}/media`)
       .then(res => JSON.parse(res.body))
   }
