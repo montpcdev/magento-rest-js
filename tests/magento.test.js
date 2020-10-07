@@ -30,4 +30,17 @@ describe('magento', () => {
     })
 
   })
+
+
+  describe('orders', () => {
+    it('ordersList', async () => {
+      const res = await client.ordersList(
+        {
+          'searchCriteria[pageSize]': 1,
+          'searchCriteria[currentPage]': 1
+        }
+      )
+      expect(res).to.be.an('object')
+    })
+  })
 })

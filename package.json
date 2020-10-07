@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests -t 50000",
+    "test:spec": "mocha tests -t 50000 -g ",
     "coverage": "nyc npm run test"
   },
   "repository": {

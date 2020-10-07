@@ -79,6 +79,15 @@ class MagentoClient {
     return requestPromise.post(`https://${this.url}/rest/default/V1/products/${sku}/media`)
       .then(res => JSON.parse(res.body))
   }
+
+
+  ordersList (params) {
+    const options = {
+      headers: { Authorization: `Bearer ${this.token}` },
+    }
+    return requestPromise.get(`https://${this.url}/rest/default/V1/orders?${querystring.stringify(params)}`, options)
+      .then(res => JSON.parse(res.body))
+  }
 }
 
 module.exports = MagentoClient
