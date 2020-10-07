@@ -81,6 +81,14 @@ class MagentoClient {
   }
 
 
+
+  /**
+   *
+   *
+   * @param {*} params
+   * @return {*} 
+   * @memberof MagentoClient
+   */
   ordersList (params) {
     const options = {
       headers: { Authorization: `Bearer ${this.token}` },
